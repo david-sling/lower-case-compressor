@@ -1,0 +1,79 @@
+regular js string -> 2bytes/char
+means, we can have 65536 combinations for each character
+But we need only 26 for only using lowercase Characters
+
+Constraint: Output can have A-Z, a-z, 0-9 only
+This counts to 26 + 26 + 10 = 62 characters.
+
+* We can use 62 different characters to represent 26 *
+
+size required to identify 62 variants -> 6bits (64 variants max)
+size required to identify 26 variants -> 5bits (32 variants max)
+
+The goal is to change 
+    6bits/char to 5bits/char
+    6/1  to 5/1
+    30/5 to 30/6
+
+    30bits/5char to 30bits/6char
+
+when 64 characters are in the list, 64^5 = 1073741824 combinations are possible when representing 5 characters
+we aim to represent 6 characters since there are only 32 chars in the list
+
+------------
+
+Process:
+* take in a 6 char string (of only small letters)
+* change it into a 30bit 0&1 string
+* change the 30bit string  into a 5 char string (of all 62 chars)
+* repeat for next 6 characters
+
+--------
+
+32 chars * 6 to 30bit:
+
+aaaaaa = 0
+aaaaab = 1
+aaaaac = 2
+aaaaad = 3
+...
+zzzzzz = < 1073741823
+
+----------
+
+64 chars * 5 to 30bit:
+
+000000 = 0
+000001 = 1
+000002 = 2
+000003 = 3
+000004 = 4
+000006 = 6
+000006 = 6
+000006 = 6
+000009 = 9
+00000a = 10
+...
+ZZZZZZ = < 1073741823 
+
+-----
+
+Task:
+Create the following functions
+* char32 to bit30
+* char64 to bit30
+* bit30 to char32
+* bit30 to char64
+
+-----------------------------------------------
+ABORTING PREV ADVANCEMENTS
+
+Simplified and optimal:
+* Change base26 to decimal to base62
+* Reverse
+
+realizasion: its 27 and 62 since 0 is included
+
+https://www.tutorialspoint.com/computer_logical_organization/number_system_conversion.htm
+
+problem faced: 12th character is wrong sometimes
