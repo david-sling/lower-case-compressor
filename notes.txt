@@ -77,3 +77,8 @@ realizasion: its 27 and 62 since 0 is included
 https://www.tutorialspoint.com/computer_logical_organization/number_system_conversion.htm
 
 problem faced: 12th character is wrong sometimes
+{
+  string: 'bhcadscdrthy',
+  encoded: 'WzpZ973Li',
+  decoded: 'bhcadscdrthz'
+}
