@@ -82,7 +82,7 @@ const string = "bhcacsdcdsvvwevcmdvelcvr";
 
 ###### OUTPUT
 
-![test1](./assets/test1.png)
+![test1](https://raw.githubusercontent.com/david-sling/lower-case-shortener/master/assets/test1.PNG "test1")
 
 #### Test case 2
 
@@ -94,7 +94,7 @@ const string = "  sdnkceocatrtoimx";
 
 ###### OUTPUT
 
-![test2](./assets/test2.png)
+![test2](https://raw.githubusercontent.com/david-sling/lower-case-shortener/master/assets/test2.PNG "test2")
 
 #### Test case 3
 
@@ -106,4 +106,4 @@ const string = "randomstring";
 
 ###### OUTPUT
 
-![test3](./assets/test3.png)
+![test3](https://raw.githubusercontent.com/david-sling/lower-case-shortener/master/assets/test3.PNG "test3")
