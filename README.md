@@ -1,5 +1,11 @@
 # lower-case-shortener
 
+## Usage
+
+    $ git clone https://github.com/david-sling/lower-case-shortener.git
+    $ cd lowercase-shortener
+    $ node index.js
+
 ## Aim:
 
 To shorten a string that has only lowercase alphabets into an alphanumeric string.
