@@ -1,6 +1,6 @@
 const { encode, decode } = require("./lib");
 
-const string = "bhcadscdrthy";
+const string = "bhcacsdcdsvvwevcmdvelcvr";
 const encoded = encode(string);
 const decoded = decode(encoded);
 

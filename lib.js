@@ -8,6 +8,8 @@ const char27tochar62 = (char27) => {
   const base62 = tobase(decimal, 62);
   const char62 = base62.map((c) => list62[c]).join("");
 
+  // console.log({ char27, decimal, char62 });
+
   return char62;
 };
 
@@ -19,7 +21,21 @@ const char62tochar27 = (char62) => {
   const base27 = tobase(decimal, 27);
   const char27 = base27.map((c) => list27[c]).join("");
 
+  // console.log({ char62, decimal, char27 });
+
   return char27;
 };
 
-module.exports = { encode: char27tochar62, decode: char62tochar27 };
+const encode = (string) => {
+  const string6 = string.trim().match(/.{1,6}/g);
+  const encoded = string6.map((s) => char27tochar62(s)).join("");
+  return encoded;
+};
+
+const decode = (encoded) => {
+  const encoded5 = encoded.match(/.{1,5}/g);
+  const decoded = encoded5.map((s) => char62tochar27(s)).join("");
+  return decoded;
+};
+
+module.exports = { encode, decode };

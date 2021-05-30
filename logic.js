@@ -8,7 +8,7 @@ var small = [];
 for (var i = 97; i < 123; i++) small.push(String.fromCharCode(i));
 
 const list62 = [...numbers, ...small, ...caps];
-const list27 = ["0", ...small];
+const list27 = [" ", ...small];
 
 const todecimal = (value, base) => {
   //   console.log(value);
