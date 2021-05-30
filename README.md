@@ -10,13 +10,13 @@
 
 To shorten a string that has only lowercase alphabets into an alphanumeric string.
 
-| Decoded | Encoded       |
-| ------- | ------------- |
-| a-z     | 0-9, a-z, A-Z |
+| Decoded  | Encoded       |
+| -------- | ------------- |
+| a-z, " " | 0-9, a-z, A-Z |
 
 ## Facts
 
-- We have to use 62 characters to represent 27 (a-z + a null value)
+- We have to use 62 characters to represent 28 (a-z + "0" + " ")
 - After calculation, It was found that the string can be reduced to 5/6 of its original length after encoding
 
 ## Algorithm
@@ -37,10 +37,10 @@ As the names suggest, these functions can be used to convert a based value to a 
 The second layer has 2 functions that rely on layer 1 and 2 lists.
 
 ```js
-char27tochar62(char27);
-char62tochar27(char62);
+char28tochar62(char28);
+char62tochar28(char62);
 
-list27 = [" ", ...["a" to "z"]]; // " " represents null value (Cannot be used)
+list28 = ["0", ...["a" to "z"], " "]; // "0" represents null value (Cannot be used)
 list63 = [...["0" to "9"], ...["a" to "z"], ...["A" to "z"]];
 ```
 
@@ -49,9 +49,9 @@ These functions follow the following example:
 ```js
 const base62 = char62.split("").map((c) => list62.indexOf(c));
 const decimal = todecimal(base62, 62);
-const base27 = tobase(decimal, 27);
-const char27 = base27.map((c) => list27[c]).join("");
-return char27;
+const base28 = tobase(decimal, 28);
+const char28 = base28.map((c) => list28[c]).join("");
+return char28;
 ```
 
 ###### LAYER 3
