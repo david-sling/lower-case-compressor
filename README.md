@@ -12,7 +12,7 @@ To shorten a string that has only lowercase alphabets into an alphanumeric strin
 
 | Decoded | Encoded       |
 | ------- | ------------- |
-| a-z     | 0-9, a-z, A-z |
+| a-z     | 0-9, a-z, A-Z |
 
 ## Facts
 
