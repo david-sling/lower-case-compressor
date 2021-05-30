@@ -113,3 +113,7 @@ const string = "randomstring";
 ###### OUTPUT
 
 ![test3](https://raw.githubusercontent.com/david-sling/lower-case-shortener/master/assets/test3.PNG "test3")
+
+## Reference
+
+- Base conversion: <https://www.tutorialspoint.com/computer_logical_organization/number_system_conversion.htm>
