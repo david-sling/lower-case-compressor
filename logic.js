@@ -1,15 +1,3 @@
-var numbers = [];
-for (var i = 48; i < 58; i++) numbers.push(String.fromCharCode(i));
-
-var caps = [];
-for (var i = 65; i < 91; i++) caps.push(String.fromCharCode(i));
-
-var small = [];
-for (var i = 97; i < 123; i++) small.push(String.fromCharCode(i));
-
-const list62 = [...numbers, ...small, ...caps];
-const list27 = [" ", ...small];
-
 const todecimal = (value, base) => {
   //   console.log(value);
   const basedReverseArr = value.reverse();
@@ -34,4 +22,4 @@ const tobase = (decimal, base) => {
   return based.reverse();
 };
 
-module.exports = { todecimal, tobase, list27, list62 };
+module.exports = { todecimal, tobase };

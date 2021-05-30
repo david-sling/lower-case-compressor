@@ -1,4 +1,16 @@
-const { tobase, todecimal, list27, list62 } = require("./logic");
+var numbers = [];
+for (var i = 48; i < 58; i++) numbers.push(String.fromCharCode(i));
+
+var caps = [];
+for (var i = 65; i < 91; i++) caps.push(String.fromCharCode(i));
+
+var small = [];
+for (var i = 97; i < 123; i++) small.push(String.fromCharCode(i));
+
+const list62 = [...numbers, ...small, ...caps];
+const list27 = [" ", ...small];
+
+const { tobase, todecimal } = require("./logic");
 
 const char27tochar62 = (char27) => {
   const base27 = char27.split("").map((c) => list27.indexOf(c));
