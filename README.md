@@ -30,7 +30,7 @@ todecimal(value, base);
 tobase(decimal, base);
 ```
 
-As the name suggests, these functions can be used to convert a based value to a decimal and vice-versa respectively.
+As the names suggest, these functions can be used to convert a based value to a decimal and vice-versa respectively.
 
 ###### LAYER 2
 
