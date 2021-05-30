@@ -4,9 +4,9 @@
 
 To shorten a string that has only lowercase alphabets into an alphanumeric string.
 
-| Input | Output        |
-| ----- | ------------- |
-| a-z   | 0-9, a-z, A-z |
+| Decoded | Encoded       |
+| ------- | ------------- |
+| a-z     | 0-9, a-z, A-z |
 
 ## Facts
 
